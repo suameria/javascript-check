@@ -1,0 +1,20 @@
+{
+  "definition": {
+    "selections": [1, 2, 3],
+    "img_src": {
+      "1": "https://tsukatte.com/wp-content/uploads/2019/03/janken_gu.png",
+      "2": "https://tsukatte.com/wp-content/uploads/2019/03/janken_pa.png",
+      "3": "https://tsukatte.com/wp-content/uploads/2019/03/janken_choki.png"
+    }
+  },
+  "choose_rps_of_enemy": 0,
+  "choose_rps_of_myself": 0,
+  "isWin": {
+    "1": { "2": true },
+    "2": { "3": true },
+    "3": { "1": true }
+  },
+  "result": {
+    "text": ""
+  }
+}

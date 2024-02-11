@@ -15,7 +15,7 @@
         </header>
         <main>
           <div class="container mx-auto">
-            <section>
+            <section id="choose">
               <h2 class="text-5xl font-bold lg:text-center dark:text-gray-50">
                 対戦
               </h2>
@@ -45,25 +45,31 @@
                 <div
                   class="flex flex-col p-8 space-y-4 rounded-md dark:bg-gray-900"
                 >
+                  <p class="text-center">ぐー</p>
                   <img
                     src="https://tsukatte.com/wp-content/uploads/2019/03/janken_gu.png"
                     alt=""
+                    data-myself="1"
                   />
                 </div>
                 <div
                   class="flex flex-col p-8 space-y-4 rounded-md dark:bg-gray-900"
                 >
+                  <p class="text-center">ぱー</p>
                   <img
                     src="https://tsukatte.com/wp-content/uploads/2019/03/janken_pa.png"
                     alt=""
+                    data-myself="2"
                   />
                 </div>
                 <div
                   class="flex flex-col p-8 space-y-4 rounded-md dark:bg-gray-900"
                 >
+                  <p class="text-center">ちょき</p>
                   <img
                     src="https://tsukatte.com/wp-content/uploads/2019/03/janken_choki.png"
                     alt=""
+                    data-myself="3"
                   />
                 </div>
               </div>
@@ -79,10 +85,7 @@
                   class="flex flex-col p-8 space-y-4 rounded-md dark:bg-gray-900"
                 >
                   <p class="text-center">相手</p>
-                  <img
-                    src="https://tsukatte.com/wp-content/uploads/2019/03/janken_gu.png"
-                    alt=""
-                  />
+                  <img src="" alt="" id="resultEnemyImg" />
                 </div>
                 <div
                   class="flex flex-col p-8 space-y-4 rounded-md dark:bg-gray-900"
@@ -92,17 +95,14 @@
                   >
                     VS
                   </h1>
-                  <p class="text-center">負けてしまいました</p>
+                  <p class="text-center" id="resultEnemyText"></p>
                 </div>
 
                 <div
                   class="flex flex-col p-8 space-y-4 rounded-md dark:bg-gray-900"
                 >
                   <p class="text-center">自分</p>
-                  <img
-                    src="https://tsukatte.com/wp-content/uploads/2019/03/janken_choki.png"
-                    alt=""
-                  />
+                  <img src="" alt="" id="resultMyselfImg" />
                 </div>
               </div>
             </section>
@@ -116,6 +116,6 @@
       </div>
     </div>
 
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
   </body>
 </html>
