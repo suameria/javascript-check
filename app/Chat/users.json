@@ -1,0 +1,22 @@
+{
+  "login": {
+    "name": ""
+  },
+  "lists": [
+    {
+      "id": 1,
+      "name": "ユーザーA",
+      "img_src": "https://source.unsplash.com/100x100/?portrait?0"
+    },
+    {
+      "id": 2,
+      "name": "ユーザーB",
+      "img_src": "https://source.unsplash.com/100x100/?portrait?1"
+    },
+    {
+      "id": 3,
+      "name": "ユーザーC",
+      "img_src": "https://source.unsplash.com/100x100/?portrait?2"
+    }
+  ]
+}

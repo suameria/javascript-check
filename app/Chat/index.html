@@ -17,15 +17,23 @@
                 <h1 class="text-4xl font-bold leadi text-center sm:text-5xl">
                   ユーザーを選択してください
                 </h1>
-                <p class="max-w-2xl text-center dark:text-gray-400">
+                <p
+                  class="max-w-2xl text-center dark:text-gray-400"
+                  id="loginUserText"
+                >
                   ユーザーAでログイン中
                 </p>
-                <div class="flex flex-row flex-wrap-reverse justify-center">
+                <div
+                  class="flex flex-row flex-wrap-reverse justify-center"
+                  id="selectUser"
+                >
                   <div class="flex flex-col justify-center m-8 text-center">
                     <img
                       alt=""
                       class="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full dark:bg-gray-500"
                       src="https://source.unsplash.com/100x100/?portrait?0"
+                      data-id="1"
+                      data-name="ユーザーA"
                     />
                     <p class="text-xl font-semibold leadi">ユーザーA</p>
                     <p class="dark:text-gray-400">Visual Designer</p>
@@ -35,6 +43,8 @@
                       alt=""
                       class="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full dark:bg-gray-500"
                       src="https://source.unsplash.com/100x100/?portrait?1"
+                      data-id="2"
+                      data-name="ユーザーB"
                     />
                     <p class="text-xl font-semibold leadi">ユーザーB</p>
                     <p class="dark:text-gray-400">Visual Designer</p>
@@ -44,6 +54,8 @@
                       alt=""
                       class="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full dark:bg-gray-500"
                       src="https://source.unsplash.com/100x100/?portrait?2"
+                      data-id="3"
+                      data-name="ユーザーC"
                     />
                     <p class="text-xl font-semibold leadi">ユーザーC</p>
                     <p class="dark:text-gray-400">Visual Designer</p>
@@ -85,7 +97,7 @@
               <ol
                 class="relative border-s border-gray-200 dark:border-gray-700"
               >
-                <li class="mb-10 ms-6">
+                <li class="mb-10 ms-6" id="list-0" style="display: none">
                   <span
                     class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900"
                   >
@@ -101,17 +113,19 @@
                     <div class="items-center justify-end mb-3 sm:flex">
                       <time
                         class="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0"
+                        id="post_time-0"
                         >2 hours ago</time
                       >
                     </div>
                     <div
                       class="p-3 text-xs italic font-normal text-gray-500 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-300"
+                      id="post_comment-0"
                     >
                       Hi ya'll!
                     </div>
                   </div>
                 </li>
-                <li class="mb-10 ms-6">
+                <!-- <li class="mb-10 ms-6">
                   <span
                     class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900"
                   >
@@ -162,7 +176,7 @@
                       Hi ya'll!
                     </div>
                   </div>
-                </li>
+                </li> -->
               </ol>
             </section>
           </div>
@@ -170,6 +184,6 @@
       </div>
     </div>
 
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
   </body>
 </html>
