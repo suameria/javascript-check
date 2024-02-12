@@ -4,12 +4,11 @@
 // cf. https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetRandomPassword.html
 
 (() => {
+  const wordLengthNames = document.getElementsByName("word_length");
+  const createCountNames = document.getElementsByName("create_count");
 
-  const wordLengthNames = document.getElementsByName('word_length');
-  const createCountNames = document.getElementsByName('create_count');
-
-  const generateBtn = document.getElementById('generateBtn');
-  const passwordArea = document.getElementById('passwordArea');
+  const generateBtn = document.getElementById("generateBtn");
+  const passwordArea = document.getElementById("passwordArea");
 
   const passwordGenerator = {
     word_length: 8,
@@ -18,14 +17,18 @@
   };
 
   const getPassword = () => {
-    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    const chars =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
     const randomValues = new Uint32Array(passwordGenerator.word_length);
     crypto.getRandomValues(randomValues);
-    const result = Array.from(randomValues, (value) => chars[value % chars.length]).join('');
+    const result = Array.from(
+      randomValues,
+      (value) => chars[value % chars.length]
+    ).join("");
     return result;
   };
 
-  generateBtn.addEventListener('click', (e) => {
+  generateBtn.addEventListener("click", (e) => {
     // 表示していたパスワードを削除
     while (passwordArea.firstChild) {
       passwordArea.removeChild(passwordArea.firstChild);
@@ -53,12 +56,10 @@
 
     // パスワードを表示
     passwordGenerator.outputs.forEach((password) => {
-      const divElement = document.createElement('div');
-      divElement.classList.add('col');
+      const divElement = document.createElement("div");
+      divElement.classList.add("col");
       divElement.innerText = password;
       passwordArea.appendChild(divElement);
     });
-
   });
-
 })();
